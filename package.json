@@ -1,0 +1,32 @@
+{
+  "name": "quetzi-bot",
+  "version": "1.0.0",
+  "description": "Quetzi Dialogflow Bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/terracing/quetzi-bot.git"
+  },
+  "keywords": [
+    "bot",
+    "dialogflow",
+    "innovatorprogram",
+    "google",
+    "google",
+    "for",
+    "education"
+  ],
+  "author": "Omar Terrazas",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/terracing/quetzi-bot/issues"
+  },
+  "homepage": "https://github.com/terracing/quetzi-bot#readme",
+  "dependencies": {
+    "dialogflow": "^1.0.0",
+    "uuid": "^3.3.3"
+  }
+}
