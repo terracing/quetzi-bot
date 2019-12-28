@@ -15,9 +15,7 @@
     "dialogflow",
     "innovatorprogram",
     "google",
-    "google",
-    "for",
-    "education"
+    "google for education"
   ],
   "author": "Omar Terrazas",
   "license": "GPL-3.0",
@@ -27,6 +25,8 @@
   "homepage": "https://github.com/terracing/quetzi-bot#readme",
   "dependencies": {
     "dialogflow": "^1.0.0",
+    "express": "^4.17.1",
+    "pug": "^2.0.4",
     "uuid": "^3.3.3"
   }
 }
