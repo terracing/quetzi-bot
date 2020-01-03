@@ -1,6 +1,7 @@
 body {
     font-family: 'Barlow', sans-serif;
     font-size: 18px;
+    background-color: #D9B13B;
 }
 
 nav.navbar.sticky-top.navbar-expand-lg a {
@@ -20,22 +21,40 @@ nav.navbar.sticky-top.navbar-expand-lg a {
     display: inline-block;
 }
 
+#navbarNav ul >li a.btn.btn-primary {
+    background-color: #2A8C55;
+    border-color: #2A8C55;
+    color: #f7f8f8;
+}
+
+#navbarNav ul >li a.btn-primary:hover {
+    color: #fff;
+    border-color: #2A8C55;
+}
+
 ul.navbar-nav li.nav-item.active a {
     color: #2A8C55;
 }
 
 #quetzi {
-    background-color: #D9B13B;
+    height: calc(100vh - 76px);
 }
 
 #my-botui-app .botui-container{
     background: #a0832c;
     border-radius: 6px;
+    min-height: 500px;
 }
 
 .botui-message-content {
     background-color: #2A8C55;
     color: #f7f8f8;
+}
+
+.botui-message-content a {
+    color: #f7f8f8;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 .human.botui-message-content {

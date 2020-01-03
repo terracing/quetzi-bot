@@ -73,7 +73,7 @@ async function executeQueries(projectId, sessionId, queries, languageCode) {
 
 router.route("/")
     .get(function (req, res) {
-        executeQueries(projectId, sessionId, queries, languageCode);
+        // executeQueries(projectId, sessionId, queries, languageCode);
         res.render('index', {
             projectId: projectId
         })
