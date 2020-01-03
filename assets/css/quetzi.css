@@ -1,0 +1,35 @@
+body {
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+}
+
+nav.bg-light {
+    background-color: none !important;
+}
+
+#navbarNav {
+    text-align: right;
+}
+
+#navbarNav ul {
+    display: inline-block;
+    width: 100%;
+}
+
+#navbarNav ul >li {
+    display: inline-block;
+}
+
+#my-botui-app .botui-container{
+    background: #D9B13B;
+    border-radius: 6px;
+}
+
+.botui-message-content.text {
+    background-color: #2A8C55;
+    color: #f7f8f8;
+}
+
+.human.botui-message-content.text {
+    background-color: #8C0F4A;
+}
