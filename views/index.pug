@@ -11,29 +11,33 @@ html
         link(rel="stylesheet" href="static/css/quetzi.css")
         title Quetzi
     body
-        .container-fluid
-            nav.navbar.sticky-top.navbar-expand-lg.navbar-light.bg-light
-                a.navbar-brand(href="#") Navbar
-                button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation")
-                    span.navbar-toggler-icon
-                .collapse.navbar-collapse#navbarNav.float-right
-                    ul.navbar-nav
-                        li.nav-item.active
-                            a.nav-link(href="#") Home #[span.sr-only (current)]
-                        li.nav-item
-                            a.nav-link(href="#") Feature
-                        li.nav-item
-                            a.nav-link(href="#") Pricing
-                        li.nav-item
-                            a.nav-link.disabled(href="#" tabindex="-1" aria-disabled="true") Disabled
-            header.row
-                .col
-                    h1 Quetzi
-            section.row
-                .col-12.col-sm-8
-                .col-12.col-sm-4
-                    #my-botui-app
-                        bot-ui
+        
+        nav.navbar.sticky-top.navbar-expand-lg
+            a.navbar-brand(href="#") #[img(src="static/images/quetzi-head.png" width=50)]
+            button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation")
+                span.navbar-toggler-icon
+            .collapse.navbar-collapse#navbarNav.float-right
+                ul.navbar-nav
+                    li.nav-item.active
+                        a.nav-link(href="#") Quetzi #[span.sr-only (current)]
+                    li.nav-item
+                        a.nav-link(href="#") Bits
+                    li.nav-item
+                        a.nav-link(href="#") Editores
+                    li.nav-item
+                        a.nav-link(href="#") Noticias
+                    li.nav-item
+                        a.nav-link(href="#") Contacto
+                    li.nav-item
+                        a.nav-link(href="#") Comenzar
+        section#quetzi
+            .container
+                .row
+                    .col-12.col-sm-8.text-center
+                        img(src="static/images/quetzi.jpg" width=400)
+                    .col-12.col-sm-4
+                        #my-botui-app
+                            bot-ui
 
 
 
