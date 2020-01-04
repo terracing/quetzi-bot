@@ -1,11 +1,11 @@
 body {
     font-family: 'Barlow', sans-serif;
-    font-size: 18px;
+    font-size: 22px;
     background-color: #D9B13B;
 }
 
 nav.navbar.sticky-top.navbar-expand-lg a {
-    color: #8C0F4A;
+    color: #ffffff;
 }
 
 #navbarNav {
@@ -25,6 +25,7 @@ nav.navbar.sticky-top.navbar-expand-lg a {
     background-color: #2A8C55;
     border-color: #2A8C55;
     color: #f7f8f8;
+    font-size: inherit;
 }
 
 #navbarNav ul >li a.btn-primary:hover {
@@ -40,15 +41,72 @@ ul.navbar-nav li.nav-item.active a {
     height: calc(100vh - 76px);
 }
 
-#my-botui-app .botui-container{
-    background: #a0832c;
-    border-radius: 6px;
-    min-height: 500px;
+#quetzi .col-12.col-sm-6.col-md-5 {
+    position: relative;
+}
+
+@keyframes float {
+	0% {
+		transform: translatex(0px);
+	}
+	50% {
+		transform: translatex(30px);
+	}
+	100% {
+		transform: translatex(0px);
+	}
+}
+
+#quetzi .col-12.col-sm-6.col-md-7 img {
+    transform: translatex(0px);
+	animation: float 6s ease-in-out infinite;
+}
+
+#my-botui-app {
+    font-family: 'Marvel', sans-serif;
+    font-size: 20px;
+    min-height: 536px;
+}
+
+.botui-messages-container {
+    padding: 10px 20px;
 }
 
 .botui-message-content {
+    width: auto;
+    max-width: 75%;
+    display: inline-block
+}
+
+.botui-message {
+    margin: 10px 0;
+    min-height: 20px;
+    display: none;
+}
+
+.botui-message:after {
+    display: block;
+    content: "";
+    clear: both
+}
+
+.botui-message-content {
+    padding: 7px 13px;
+    border-radius: 10px;
     background-color: #2A8C55;
     color: #f7f8f8;
+    width: auto;
+    max-width: 75%;
+    display: inline-block
+}
+
+.botui-message-content.human {
+    background-color: #8C0F4A;
+    float: right
+}
+
+.botui-message-content.text {
+    line-height: 1.3
 }
 
 .botui-message-content a {
@@ -57,6 +115,70 @@ ul.navbar-nav li.nav-item.active a {
     text-decoration: underline;
 }
 
-.human.botui-message-content {
-    background-color: #8C0F4A;
+.botui-message-content.loading {
+    background-color: rgba(206, 206, 206, .5);
+    line-height: 1.3;
+    text-align: center
+}
+
+.dot {
+    width: .5rem;
+    height: .5rem;
+    border-radius: .5rem;
+    display: inline-block;
+    background-color: #919292
+}
+
+.dot:nth-last-child(1) {
+    margin-left: .3rem;
+    animation: loading .6s .3s linear infinite
+}
+
+.dot:nth-last-child(2) {
+    margin-left: .3rem;
+    animation: loading .6s .2s linear infinite
+}
+
+.dot:nth-last-child(3) {
+    animation: loading .6s .1s linear infinite
+}
+
+@media (min-width:400px) {
+    .botui-app-container {
+        width: 400px;
+        height: 500px;
+        margin: 0 auto
+    }
+}
+
+@keyframes loading {
+    0% {
+        transform: translate(0, 0);
+        background-color: #ababab
+    }
+
+    25% {
+        transform: translate(0, -3px)
+    }
+
+    50% {
+        transform: translate(0, 0);
+        background-color: #ababab
+    }
+
+    75% {
+        transform: translate(0, 3px)
+    }
+
+    100% {
+        transform: translate(0, 0)
+    }
+}
+
+
+#bits {
+    background: #f7f8f8;
+    height: 100vh;
+    color: #8C0F4A;
+    font-size: 26px;
 }
