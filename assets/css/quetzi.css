@@ -1,70 +1,50 @@
 body {
     font-family: 'Barlow', sans-serif;
-    font-size: 22px;
-    background-color: #D9B13B;
+    font-size: 16px;
 }
 
-nav.navbar.sticky-top.navbar-expand-lg a {
-    color: #ffffff;
+nav {
+    background: #d98e32;
+    box-shadow: none;
 }
 
-#navbarNav {
-    text-align: right;
-}
-
-#navbarNav ul {
-    display: inline-block;
-    width: 100%;
-}
-
-#navbarNav ul >li {
-    display: inline-block;
-}
-
-#navbarNav ul >li a.btn.btn-primary {
-    background-color: #2A8C55;
-    border-color: #2A8C55;
-    color: #f7f8f8;
-    font-size: inherit;
-}
-
-#navbarNav ul >li a.btn-primary:hover {
-    color: #fff;
-    border-color: #2A8C55;
-}
-
-ul.navbar-nav li.nav-item.active a {
-    color: #2A8C55;
-}
-
-#quetzi {
-    height: calc(100vh - 76px);
-}
-
-#quetzi .col-12.col-sm-6.col-md-5 {
-    position: relative;
+section#quetzi {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d98e32+0,d9b13b+100 */
+    background: #d98e32;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #d98e32 0%, #d9b13b 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #d98e32 0%, #d9b13b 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #d98e32 0%, #d9b13b 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d98e32', endColorstr='#d9b13b', GradientType=0);
+    /* IE6-9 */
+    border-radius: 0 0 50% 0;
+    padding: 80px 0;
 }
 
 @keyframes float {
-	0% {
-		transform: translatex(0px);
-	}
-	50% {
-		transform: translatex(30px);
-	}
-	100% {
-		transform: translatex(0px);
-	}
+    0% {
+        transform: translatex(0px);
+    }
+
+    50% {
+        transform: translatex(-30px);
+    }
+
+    100% {
+        transform: translatex(0px);
+    }
 }
 
-#quetzi .col-12.col-sm-6.col-md-7 img {
+#quetzi img {
     transform: translatex(0px);
-	animation: float 6s ease-in-out infinite;
+    animation: float 6s ease-in-out infinite;
 }
 
 #my-botui-app {
     font-family: 'Marvel', sans-serif;
-    font-size: 20px;
     min-height: 536px;
 }
 
@@ -175,10 +155,22 @@ ul.navbar-nav li.nav-item.active a {
     }
 }
 
-
 #bits {
-    background: #f7f8f8;
-    height: 100vh;
-    color: #8C0F4A;
-    font-size: 26px;
+    padding: 80px 0;
+}
+
+#news {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d9b13b+0,d9b13b+50,8c0f4a+100 */
+background: #d9b13b; /* Old browsers */
+background: -moz-linear-gradient(top,  #d9b13b 0%, #d9b13b 50%, #8c0f4a 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #d9b13b 0%,#d9b13b 50%,#8c0f4a 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #d9b13b 0%,#d9b13b 50%,#8c0f4a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9b13b', endColorstr='#8c0f4a',GradientType=0 ); /* IE6-9 */
+
+    border-radius: 50% 0 0 0;
+    padding: 80px 0;
+}
+
+#contact {
+    background: #8C0F4A;
 }

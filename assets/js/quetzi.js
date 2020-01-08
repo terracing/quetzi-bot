@@ -1,7 +1,7 @@
 $(function(){
-    $('.container').each(function(){
-       $(this).closest('section').css('padding-top',(($(this).closest('section').height() - $(this).height()) / 2 ));
-    });
+    $('.sidenav').sidenav();
+
+    
     $('.botui-message:nth-child(1)').fadeIn(1000, function(){
         $('.botui-message:nth-child(2)').fadeIn(1000, function(){
             setTimeout(function(){
@@ -49,5 +49,4 @@ $(function(){
             }, 1000);
         });
     });
-
-})
+});

@@ -4,36 +4,32 @@ html
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible" content="ie=edge")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
-        link(href="https://fonts.googleapis.com/css?family=Barlow|Marvel&display=swap" rel="stylesheet")
-        link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous")
-        link(rel="stylesheet" href="static/css/quetzi.css")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css")
+        link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+        link(rel="stylesheet", href="static/css/quetzi.css")
         title Quetzi
     body
-        
-        nav.navbar.sticky-top.navbar-expand-lg
-            a.navbar-brand(href="") #[img(src="static/images/quetzi-head.png" width=50)]
-            button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation")
-                span.navbar-toggler-icon
-            .collapse.navbar-collapse#navbarNav.float-right
-                ul.navbar-nav
-                    li.nav-item.active
-                        a.nav-link(href="#quetzi") Quetzi #[span.sr-only (current)]
-                    li.nav-item
-                        a.nav-link(href="#bits") Bits
-                    li.nav-item
-                        a.nav-link(href="#") Editores
-                    li.nav-item
-                        a.nav-link(href="#") Noticias
-                    li.nav-item
-                        a.nav-link(href="#") Contacto
-                    li.nav-item
-                        a.btn.btn-primary(href="#") Comenzar
+        .navbar-fixed
+            nav
+                .nav-wrapper
+                    a.brand-logo(href="#!") &nbsp;Quetzi
+                    a.sidenav-trigger(href="#" data-target="mobile-demo") #[i.material-icons menu]
+                    ul.right.hide-on-med-and-down
+                        li #[a(href="") Bits]        
+                        li #[a(href="") Noticias]
+                        li #[a(href="") Contacto]
+                        li #[a(href="") Comienza]
+        ul.sidenav#mobile-demo
+            li #[a(href="") Bits]
+            li #[a(href="") Noticias]
+            li #[a(href="") Contacto]
+            li #[a(href="") Comienza]
         section#quetzi
             .container
                 .row
-                    .col-12.col-sm-6.col-md-7
-                        img(src="static/images/quetzi.png" width=500)
-                    .col-12.col-sm-6.col-md-5
+                    .col.s12.m6.center-align
+                        img.responsive-img(src="static/images/quetzi.png" width=500)
+                    .col.s12.m6
                         #my-botui-app
                             .botui-messages-container
                                 .botui-message
@@ -77,21 +73,34 @@ html
                                 .botui-message
                                     .botui-message-content.text
                                         span No olvides suscribirte al #[a(href="#noticias") boletín de noticias] para mantenerte al tanto de mis novedades.
+
         section#bits
             .container
-                .row
-                    .col-12.col-sm-6
+                .row.valign-wrapper
+                    .col.s12.m6
                         p Los #[strong bits de información] son #[em micro] tutoriales, principalmente, de las herramientas de #[strong G Suite] para que los docentes desarrollen contenidos geniales.
                         p #[a.btn.btn-primary(href="bits") Conoce más]
-                    .col-12.col-sm-6
+                    .col.s12.m6
+                        img.responsive-img(src="static/images/g_suite.png")
+
+        section#news
+            .container
+                .row.valign-wrapper
+                    .col.s12.m6.center-align
+                        img.responsive-img(src="static/images/quetzi-03.png" width=400)
+                    .col.s12.m6.right-align
+                        p Mantente al tanto de actualizaciones y nuevas funcionalidades.
+                        p #[a.btn.btn-primary(hre="newsletter" data-toggle="modal" data-target="#newsletterModal") Me quiero enterar de todo]
+
+        section#contact
+            .container
+                .row
+                    .col.s12.center-align
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque quasi ipsa nam voluptas asperiores natus. Corrupti totam ducimus voluptas labore modi tempora? Nostrum incidunt odio atque saepe iure, quasi mollitia.
 
 
 
 
-
-
-
-        script(src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous")
-        script(src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous")
-        script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous")
+        script(src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js")
         script(src="static/js/quetzi.js")
