@@ -1,0 +1,190 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    background: #d6d6d6;
+    color: #0D0D0D;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Neucha', cursive;
+}
+
+a.btn,
+a.btn-floating {
+    text-transform: none;
+    font-size: 1em;
+    background-color: #8C0F4A;
+}
+
+a.btn i {
+    vertical-align: middle;
+}
+
+a.btn:focus,
+a.btn-floating:focus,
+a.btn:hover {
+    background-color: #8C0F4A;
+}
+
+a.sidenav-trigger.btn-floating.btn-large.waves-effect.waves-light {
+    bottom: 10px;
+    right: 10px;
+    position: fixed;
+}
+
+section {
+    min-height: 100vmax;
+}
+
+body > header {
+    width: 100%;
+    position: fixed;
+    background: #d6d6d6;
+    z-index: 30;
+    display: none;
+}
+
+body > header h1 {
+    color: #d98e32;
+}
+
+body > header h1 svg {
+    fill: #d98e32;
+}
+
+section#main {
+    position: relative;
+    overflow-x: hidden;
+}
+
+section#main .container {
+    padding-top: 0;
+}
+
+#back {
+    position: absolute;
+    top: 40px;
+    right: -160px;
+    z-index: -30;
+}
+
+section#main p {
+    text-align: right;
+}
+
+section#main h1 {
+    color: #D9B13B;
+}
+
+.animate {
+    transform: translatex(0px);
+    animation: float 10s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translatex(-30px);
+    }
+
+    50% {
+        transform: translatex(30px);
+    }
+
+    100% {
+        transform: translatex(-30px);
+    }
+}
+
+section#newsletter {
+    text-align: center;
+    position: relative;
+    overflow-x: hidden;
+}
+
+#backnews {
+    position: absolute;
+    transform: rotate(180deg);
+    bottom: 0px;
+    left: -20px;
+    z-index: -30;
+}
+
+#slide-out.sidenav {
+    background: #d98e32;
+    background: linear-gradient(to bottom, #d98e32 0%, #d9b13b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d98e32', endColorstr='#d9b13b', GradientType=0);
+    width: 240px;
+}
+
+#slide-out.sidenav header {
+    display: block;
+}
+
+#slide-out.sidenav ul {
+    border-top: 2px solid #d98e32;
+}
+
+#slide-out.sidenav ul li {
+    border-bottom: 1px solid #d98e32;
+}
+
+#slide-out.sidenav a {
+    font-size: 1em;
+}
+
+header h1 {
+    padding-left: 20px;
+    font-size: 1.2em;
+    color: #d6d6d6;
+}
+
+header h1 svg {
+    width: 40px;
+    fill: #d6d6d6;
+    vertical-align: text-bottom;
+}
+
+.modal-content {
+    height: 400px;
+}
+
+#contact {
+    background: #d98e32;
+    background: linear-gradient(to bottom, #d98e32 0%, #d9b13b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d98e32', endColorstr='#d9b13b', GradientType=0);
+}
+
+#contact a {
+    color: #0D0D0D;
+    text-decoration: underline;
+}
+
+#contact p img{
+    vertical-align: middle;
+}
+
+#contact #mex18 a {
+    font-family: 'Neucha', cursive;
+    font-size: 1.4em;
+    text-decoration: none;
+}
+
+.contact-header {
+    background: transparent;
+    transition: background 1s ease;
+}
+
+.contact-header  h1 {
+    color: #8C0F4A;
+    transition: color 1s ease;
+}
+
+.contact-header  h1 svg {
+    fill: #8C0F4A;
+    transition: fill 1s ease;
+}
