@@ -4,18 +4,34 @@ $(function () {
         outDuration: 900
     });
 
-    var botui = new BotUI('my-botui-app');
+    var botui = false;
+
+    openModal = function () {
+        $('#my-botui-app').html('<bot-ui></bot-ui>')
+
+        setTimeout(function () {
+            botui = new BotUI('my-botui-app');
+        }, 100);
+
+        setTimeout(function () {
+            conversation()
+        }, 200)
+    }
 
     closeModal = function () {
-        botui.message.removeAll();
+        $('bot-ui').remove();
     }
-    $('.modal').modal({
+
+    $('#dialog.modal.modal').modal({
+        'onOpenStart': openModal,
         'onCloseEnd': closeModal
     });
+    
+    $('#newsletterModal.modal').modal();
 
     $(window).scroll(function () {
         const Bits = $('section#bits').offset();
-        if ($(window).scrollTop() >= Bits.top) {
+        if ($(window).scrollTop() >= (Bits.top - 50)) {
             $('body > header').fadeIn(200)
         } else {
             $('body > header').fadeOut(200)
@@ -29,9 +45,7 @@ $(function () {
         }
     })
 
-
-    $('#bot-modal').on('click', function () {
-        botui.message.removeAll();
+    conversation = function () {
         botui.message.add({
             content: '¡Hola! Soy Quetzi'
         }).then(function () {
@@ -100,7 +114,7 @@ $(function () {
                                         botui.message.add({
                                             delay: 2000,
                                             loading: true,
-                                            content: 'No olvides suscribirte al [boletín de noticias](#newsletter) para mantenerte al tanto de mis novedades.'
+                                            content: 'Bueno, ya que conoces los [bits](#bits) no olvides suscribirte al [boletín de noticias](#newsletter) para mantenerte al tanto de mis novedades.'
                                         });
                                     }
 
@@ -117,5 +131,5 @@ $(function () {
                 });
             });
         });
-    })
+    }
 })

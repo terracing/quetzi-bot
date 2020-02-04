@@ -15,20 +15,24 @@ h6 {
 }
 
 a.btn,
-a.btn-floating {
+a.btn-floating, .modal button.btn {
     text-transform: none;
     font-size: 1em;
     background-color: #8C0F4A;
 }
 
-a.btn i {
+a.btn i, .modal button.btn i {
     vertical-align: middle;
 }
 
 a.btn:focus,
 a.btn-floating:focus,
-a.btn:hover {
+a.btn:hover, .modal button.btn:hover {
     background-color: #8C0F4A;
+}
+
+.modal button.btn {
+    font-weight: 300;
 }
 
 a.sidenav-trigger.btn-floating.btn-large.waves-effect.waves-light {
@@ -79,6 +83,15 @@ section#main p {
 
 section#main h1 {
     color: #D9B13B;
+}
+
+#dialog.modal.bottom-sheet {
+    max-height: 60%;
+    background: #ffffff;
+}
+
+#dialog .botui-actions-buttons-button {
+    background: #8C0F4A;
 }
 
 .animate {
