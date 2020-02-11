@@ -1,176 +1,132 @@
 body {
-    font-family: 'Barlow', sans-serif;
-    font-size: 16px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 24px;
+    background: #d6d6d6;
+    color: #0D0D0D;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Neucha', cursive;
+}
+
+a.btn,
+a.btn-floating, .modal button.btn {
+    text-transform: none;
+    font-size: 1em;
+    background-color: #8C0F4A;
+}
+
+a.btn i, .modal button.btn i {
+    vertical-align: middle;
+}
+
+a.btn:focus,
+a.btn-floating:focus,
+a.btn:hover, .modal button.btn:hover {
+    background-color: #8C0F4A;
 }
 
 nav {
-    background: #d98e32;
+    line-height: normal;
+    background: none;
     box-shadow: none;
+    padding-top: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
 }
 
-section#quetzi {
-    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d98e32+0,d9b13b+100 */
-    background: #d98e32;
-    /* Old browsers */
-    background: -moz-linear-gradient(top, #d98e32 0%, #d9b13b 100%);
-    /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #d98e32 0%, #d9b13b 100%);
-    /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #d98e32 0%, #d9b13b 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d98e32', endColorstr='#d9b13b', GradientType=0);
-    /* IE6-9 */
-    border-radius: 0 0 50% 0;
-    padding: 80px 0;
+nav svg {
+    width: 2.8em;
+    fill: #d98e32;
+    vertical-align: middle;
+}
+
+nav a#brand {
+    color: #0D0D0D;
+    display: inline-block;
+    vertical-align: top;
+}
+
+nav a#brand h1 {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    font-size: 2em;
+}
+
+nav ul {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li > a{
+    display: block;
+    padding: 1em 1em 0.5em 1em;
+    font-size: 1em;
+    color: #0D0D0D;
+}
+
+nav ul li > a:hover {
+    background-color: transparent;
+    border-bottom: 1px solid #d98e32;
+    color: #d98e32;
+}
+
+nav a.btn {
+    vertical-align: top;
+    margin-top: 14px;
+    float: right;
+}
+
+section {
+    min-height: 100vmin;
+}
+
+section#main .container {
+    margin-top: 200px;
+    padding-top: 0;
+}
+
+section#main {
+    position: relative;
+    overflow: hidden;
+}
+
+#back {
+    position: absolute;
+    top: -20%;
+    right: -8%;
+    z-index: -30;
+    width: 70%;
+}
+
+.animate {
+    transform: translatex(0px);
+    animation: float 10s ease-in-out infinite;
 }
 
 @keyframes float {
     0% {
-        transform: translatex(0px);
-    }
-
-    50% {
         transform: translatex(-30px);
     }
 
-    100% {
-        transform: translatex(0px);
-    }
-}
-
-#quetzi img {
-    transform: translatex(0px);
-    animation: float 6s ease-in-out infinite;
-}
-
-#my-botui-app {
-    font-family: 'Marvel', sans-serif;
-    min-height: 536px;
-}
-
-.botui-messages-container {
-    padding: 10px 20px;
-}
-
-.botui-message-content {
-    width: auto;
-    max-width: 75%;
-    display: inline-block
-}
-
-.botui-message {
-    margin: 10px 0;
-    min-height: 20px;
-    display: none;
-}
-
-.botui-message:after {
-    display: block;
-    content: "";
-    clear: both
-}
-
-.botui-message-content {
-    padding: 7px 13px;
-    border-radius: 10px;
-    background-color: #2A8C55;
-    color: #f7f8f8;
-    width: auto;
-    max-width: 75%;
-    display: inline-block
-}
-
-.botui-message-content.human {
-    background-color: #8C0F4A;
-    float: right
-}
-
-.botui-message-content.text {
-    line-height: 1.3
-}
-
-.botui-message-content a {
-    color: #f7f8f8;
-    font-weight: bold;
-    text-decoration: underline;
-}
-
-.botui-message-content.loading {
-    background-color: rgba(206, 206, 206, .5);
-    line-height: 1.3;
-    text-align: center
-}
-
-.dot {
-    width: .5rem;
-    height: .5rem;
-    border-radius: .5rem;
-    display: inline-block;
-    background-color: #919292
-}
-
-.dot:nth-last-child(1) {
-    margin-left: .3rem;
-    animation: loading .6s .3s linear infinite
-}
-
-.dot:nth-last-child(2) {
-    margin-left: .3rem;
-    animation: loading .6s .2s linear infinite
-}
-
-.dot:nth-last-child(3) {
-    animation: loading .6s .1s linear infinite
-}
-
-@media (min-width:400px) {
-    .botui-app-container {
-        width: 400px;
-        height: 500px;
-        margin: 0 auto
-    }
-}
-
-@keyframes loading {
-    0% {
-        transform: translate(0, 0);
-        background-color: #ababab
-    }
-
-    25% {
-        transform: translate(0, -3px)
-    }
-
     50% {
-        transform: translate(0, 0);
-        background-color: #ababab
-    }
-
-    75% {
-        transform: translate(0, 3px)
+        transform: translatex(30px);
     }
 
     100% {
-        transform: translate(0, 0)
+        transform: translatex(-30px);
     }
-}
-
-#bits {
-    padding: 80px 0;
-}
-
-#news {
-    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d9b13b+0,d9b13b+50,8c0f4a+100 */
-background: #d9b13b; /* Old browsers */
-background: -moz-linear-gradient(top,  #d9b13b 0%, #d9b13b 50%, #8c0f4a 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  #d9b13b 0%,#d9b13b 50%,#8c0f4a 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  #d9b13b 0%,#d9b13b 50%,#8c0f4a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9b13b', endColorstr='#8c0f4a',GradientType=0 ); /* IE6-9 */
-
-    border-radius: 50% 0 0 0;
-    padding: 80px 0;
-}
-
-#contact {
-    background: #8C0F4A;
 }
