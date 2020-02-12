@@ -38,8 +38,14 @@ nav {
     padding-top: 10px;
     position: fixed;
     width: 100%;
+    height: auto;
     top: 0;
     z-index: 100;
+}
+
+nav.no-transparent {
+    background: #d6d6d6;
+    transition: background 1s ease;
 }
 
 nav svg {
@@ -104,12 +110,16 @@ section#main {
     overflow: hidden;
 }
 
+section#main h1 {
+    color: #D9B13B;
+}
+
 #back {
     position: absolute;
     top: -20%;
     right: -8%;
     z-index: -30;
-    width: 70%;
+    max-width: 1000px;
 }
 
 .animate {
@@ -129,4 +139,44 @@ section#main {
     100% {
         transform: translatex(-30px);
     }
+}
+
+section#newsletter {
+    text-align: center;
+    position: relative;
+    overflow-x: hidden;
+}
+
+#backnews {
+    position: absolute;
+    transform: rotate(180deg);
+    top: 25%;
+    right: 10%;
+    z-index: -30;
+}
+
+#contact {
+    background: #d98e32;
+    background: linear-gradient(to bottom, #d98e32 0%, #d9b13b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d98e32', endColorstr='#d9b13b', GradientType=0);
+}
+
+#contact a {
+    color: #0D0D0D;
+    text-decoration: underline;
+}
+
+#contact p img{
+    vertical-align: middle;
+}
+
+#contact #mex18 a {
+    font-family: 'Neucha', cursive;
+    font-size: 1.4em;
+    text-decoration: none;
+}
+
+.contact-header svg {
+    fill: #8C0F4A;
+    transition: fill 1s ease;
 }
